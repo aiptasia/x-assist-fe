@@ -17,6 +17,7 @@
   "dependencies": {
     "angular": "^1.6.0",
     "angular-route": "^1.6.0",
-    "angular-resource": "^1.6.0"
+    "angular-resource": "^1.6.0",
+    "normalize-css": "^5.0.0"
   }
 }
