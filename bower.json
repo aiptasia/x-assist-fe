@@ -1,0 +1,17 @@
+{
+  "name": "tricky-smm-ng",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "sgolikov <sgolikov.im@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
