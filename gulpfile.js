@@ -1,13 +1,96 @@
 'use strict';
 
 var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')();
+    gulpsync = require('gulp-sync')(gulp),
+    $ = require('gulp-load-plugins')({
+        pattern: ['gulp-*', 'del']
+    });
 
-gulp.task('default', ['inject', 'connect', 'watch']);
+// ------------------------------
+// Default
+
+gulp.task('default', gulpsync.sync(['clean', 'build', 'inject', 'serve']));
+
+// ------------------------------
+// Serve
+
+gulp.task('serve', ['connect', 'watch']);
+
+// ------------------------------
+// Build
+
+gulp.task('build', ['html', 'scss', 'js']);
+
+// ------------------------------
+// HTML
+
+gulp.task('html', function() {
+    return gulp.src('./src/**/*.html')
+        .pipe(gulp.dest('./dist'));
+});
+
+// ------------------------------
+// SCSS
+
+gulp.task('scss', function() {
+    return gulp.src('./src/**/*.scss')
+        .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.autoprefixer())
+        .pipe(gulp.dest('./dist'));
+});
+
+// ------------------------------
+// JavaScript
+
+gulp.task('js', function() {
+    return gulp.src('./src/**/*.js')
+        .pipe(gulp.dest('./dist'));
+});
+
+// ------------------------------
+// Inject
+
+gulp.task('inject', function() {
+    return gulp.src('./dist/index.html')
+        .pipe($.inject(
+            gulp.src('./bower.json')
+            .pipe($.mainBowerFiles()), { relative: true, name: 'bower' }
+        ))
+        .pipe($.inject(
+            gulp.src('./dist/**/*.css'), { relative: true }
+        ))
+        .pipe($.inject(
+            gulp.src('./dist/**/*.js')
+            .pipe($.angularFilesort().on('error', function(err) {
+                $.util.log($.util.colors.red('[Filesort]'), err.message);
+                this.emit('end');
+            })), { relative: true }
+        ))
+        .pipe(gulp.dest('./dist'));
+});
+
+// ------------------------------
+// Clean
+
+gulp.task('clean', function() {
+    return $.del('./dist');
+});
+
+// ------------------------------
+// Watch
+
+gulp.task('watch', function(event) {
+    gulp.watch('./src/**/*.html', gulpsync.sync(['html', 'inject', 'reload']));
+    gulp.watch('./src/**/*.scss', gulpsync.sync(['scss', 'inject', 'reload']));
+    gulp.watch('./src/**/*.js', gulpsync.sync(['js', 'inject', 'reload']));
+});
+
+// ------------------------------
+// Connect
 
 gulp.task('connect', function() {
     $.connect.server({
-        root: 'src',
+        root: 'dist',
         livereload: true,
         port: 8000,
         middleware: function(connect, opt) {
@@ -16,28 +99,10 @@ gulp.task('connect', function() {
     });
 });
 
+// ------------------------------
+// Reload
+
 gulp.task('reload', function() {
-    gulp.src('./src/**/*')
+    gulp.src('./dist/**/*')
         .pipe($.connect.reload());
-});
-
-gulp.task('watch', function() {
-    gulp.watch('./src/**/*', ['reload']);
-});
-
-gulp.task('inject', function() {
-    gulp.src('./src/index.html')
-        .pipe($.inject(
-            gulp.src('./src/**/*.js')
-                .pipe($.angularFilesort())
-                , {relative: true}
-            ))
-        .pipe($.inject(
-            gulp.src('./src/**/*.css'), {relative: true}
-            ))
-        .pipe($.inject(
-            gulp.src('./bower.json')
-                .pipe($.mainBowerFiles()), {relative: true, name: 'bower'}
-            ))
-        .pipe(gulp.dest('./src'));
 });
