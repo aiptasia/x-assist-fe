@@ -1,0 +1,15 @@
+.layout {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__header {
+    flex-basis: 100%;
+  }
+
+  &__activity {
+    flex: 1;
+    background-color: $activity-background-color;
+    color: $lt-primary-text-color;
+  }
+}
