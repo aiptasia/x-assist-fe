@@ -19,13 +19,25 @@ gulp.task('serve', ['connect', 'watch']);
 // ------------------------------
 // Build
 
-gulp.task('build', ['html', 'scss', 'js']);
+gulp.task('build', ['html', 'jade', 'scss', 'js']);
 
 // ------------------------------
 // HTML
 
 gulp.task('html', function() {
     return gulp.src('./src/**/*.html')
+        .pipe(gulp.dest('./dist'));
+});
+
+// ------------------------------
+// Jade
+
+gulp.task('jade', function() {
+    return gulp.src('./src/**/*.jade')
+        .pipe($.jade().on('error', function(err) {
+            $.util.log($.util.colors.red('[Jade]'), err.message);
+            this.emit('end');
+        }))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -81,6 +93,7 @@ gulp.task('clean', function() {
 
 gulp.task('watch', function(event) {
     gulp.watch('./src/**/*.html', gulpsync.sync(['html', 'inject', 'reload']));
+    gulp.watch('./src/**/*.jade', gulpsync.sync(['jade', 'inject', 'reload']));
     gulp.watch('./src/**/*.scss', gulpsync.sync(['scss', 'inject', 'reload']));
     gulp.watch('./src/**/*.js', gulpsync.sync(['js', 'inject', 'reload']));
 });
