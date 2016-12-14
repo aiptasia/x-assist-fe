@@ -46,6 +46,12 @@ gulp.task('jade', function() {
 
 gulp.task('scss', function() {
     return gulp.src('./src/**/*.scss')
+        .pipe($.order([
+            'app/core/style/variables.scss',
+            'app/core/style/mixins.scss',
+            'app/core/style/*.scss',
+            '**/*.scss']))
+        .pipe($.concat('app.scss'))
         .pipe($.sass().on('error', $.sass.logError))
         .pipe($.autoprefixer())
         .pipe(gulp.dest('./dist'));
