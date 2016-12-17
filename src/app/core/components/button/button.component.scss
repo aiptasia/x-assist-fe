@@ -1,0 +1,21 @@
+ts-button {
+  color: currentColor;
+  cursor: pointer;
+  display: inline-flex;
+
+  .ts-button {
+
+    &__icon {
+      display: inline-block;
+      height: 1em;
+      width: 1em;
+      stroke-width: 0;
+      stroke: currentColor;
+      fill: currentColor;
+    }
+
+    &__divider {
+      margin: 0 0.25rem;
+    }
+  }
+}
