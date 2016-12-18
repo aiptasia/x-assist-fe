@@ -1,0 +1,10 @@
+.ts-dropdown__button
+  ts-button(
+    data="$ctrl.button",
+    ng-click="visible = !visible")
+
+.ts-dropdown__backdrop(ng-show="visible")
+  .ts-dropdown__item(ng-repeat="item in $ctrl.items")
+    ts-button(
+      data="item",
+      ng-click="$ctrl.onItemClick(item)")

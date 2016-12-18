@@ -1,0 +1,30 @@
+$background-color: $activity-background-color;
+$text-color: $lt-primary-text-color;
+
+ts-dropdown {
+
+  .ts-dropdown {
+
+    &__button {
+    }
+
+    &__backdrop {
+      background-color: $background-color;
+      border: 1px solid darken($background-color, 7%);
+      border-radius: 5px;
+      margin-top: 1rem;
+      position: absolute;
+    }
+
+    &__item {
+      color: $text-color;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: background-color 0.5s ease;
+    }
+    &__item:hover {
+      background: darken($background-color, 5%);
+      transition: background-color 0.5s ease;
+    }
+  }
+}
