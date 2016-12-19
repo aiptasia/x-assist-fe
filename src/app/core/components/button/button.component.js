@@ -6,6 +6,17 @@ angular
         templateUrl: 'app/core/components/button/button.component.html',
         bindings: {
             "title": "@",
-            "svg": "@"
+            "svg": "@",
+            "data": "<"
+        },
+        controller: function() {
+            var vm = this;
+
+            vm.$onInit = function() {
+                if (vm.data) {
+                    vm.title = vm.data.title;
+                    vm.svg = vm.data.svg;
+                }
+            }
         }
     });
