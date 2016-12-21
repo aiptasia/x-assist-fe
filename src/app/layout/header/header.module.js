@@ -1,5 +1,5 @@
 'use strict';
 
 angular.module('ts.layout.header', [
-    'ts.components.navbar'
+    'ts.components.toolbar'
 ]);

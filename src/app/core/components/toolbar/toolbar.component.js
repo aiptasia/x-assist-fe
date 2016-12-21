@@ -1,9 +1,9 @@
 'use strict';
 
 angular
-    .module('ts.components.navbar')
-    .component('tsNavbar', {
-        templateUrl: 'app/core/components/navbar/navbar.component.html',
+    .module('ts.components.toolbar')
+    .component('tsToolbar', {
+        templateUrl: 'app/core/components/toolbar/toolbar.component.html',
         bindings: {
             "navs": "<",
             "onClick": "&"

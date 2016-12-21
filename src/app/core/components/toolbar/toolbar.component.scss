@@ -1,17 +1,17 @@
-$navbar-item-padding: 1rem;
+$toolbar-item-padding: 1rem;
 
-// .navbar element must be placed inside a flexbox
+// .toolbar element must be placed inside a flexbox
 // container for purpose of vertical alignment
 
-ts-navbar {
+ts-toolbar {
   display: flex;
 
-  .ts-navbar {
+  .ts-toolbar {
 
     &__item {
       align-items: center;
       display: flex;
-      padding: 0 $navbar-item-padding;
+      padding: 0 $toolbar-item-padding;
       white-space: nowrap;
     }
   }
