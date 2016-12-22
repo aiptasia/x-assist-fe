@@ -1,0 +1,36 @@
+$main-sidebar-border-color: grey;
+
+ts-main-activity {
+  display: flex;
+
+  .ts-main-activity {
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      flex-grow: 1;
+      order: 1;
+    }
+
+    &__view {
+      display: block;
+      overflow: auto;
+    }
+
+    &__sidebar {
+
+      &.left {
+        flex-basis: 20%;
+        order: 0;
+        border-right: 1px solid $main-sidebar-border-color;
+      }
+      &.right {
+        flex-basis: 20%;
+        order: 2;
+        border-left: 1px solid $main-sidebar-border-color;
+      }
+    }
+  }
+}

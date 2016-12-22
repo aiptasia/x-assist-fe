@@ -2,8 +2,5 @@
 
 angular.module('ts', [
     'ngRoute',
-
-    'ts.core',
-    'ts.layout',
-    'ts.activities'
+    'ts.main.activity'
 ]);

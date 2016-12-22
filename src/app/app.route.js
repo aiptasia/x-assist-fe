@@ -8,8 +8,8 @@ angular
 
             $routeProvider
                 .when('/', {
-                    template: 'empty activity'
+                    template: 'main view'
                 })
                 .otherwise('/');
         }
-    ]);
+    ])
