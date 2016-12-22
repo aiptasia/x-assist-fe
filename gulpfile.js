@@ -50,6 +50,7 @@ gulp.task('scss', function() {
             'app/core/style/variables.scss',
             'app/core/style/mixins.scss',
             'app/core/style/*.scss',
+            '**/*.activity.scss',
             '**/*.scss']))
         .pipe($.concat('app.scss'))
         .pipe($.sass().on('error', $.sass.logError))
