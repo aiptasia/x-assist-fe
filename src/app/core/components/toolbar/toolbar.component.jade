@@ -1,9 +1,9 @@
-.ts-toolbar__item(ng-repeat="nav in $ctrl.navs")
+.ts-toolbar__item(ng-repeat="item in $ctrl.data")
   ts-button(
-    ng-if="nav.type === 'button'",
-    data="nav",
-    ng-click="$ctrl.onItemClick(nav)")
+    ng-if="item.type === 'button'",
+    data="item",
+    ng-click="$ctrl.onItemClick(item)")
   ts-dropdown(
-    ng-if="nav.type === 'dropdown'",
-    data="nav",
+    ng-if="item.type === 'dropdown'",
+    data="item",
     on-click="$ctrl.onItemClick(item)")

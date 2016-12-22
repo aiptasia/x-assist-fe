@@ -5,7 +5,7 @@ angular
     .component('tsToolbar', {
         templateUrl: 'app/core/components/toolbar/toolbar.component.html',
         bindings: {
-            "navs": "<",
+            "data": "<",
             "onClick": "&"
         },
         transclude: true,
