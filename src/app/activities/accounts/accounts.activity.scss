@@ -1,0 +1,23 @@
+$accounts-toolbar-bg-color: grey;
+$accounts-toolbar-text-color: $dt-primary-text-color;
+$accounts-bg-color: $activity-background-color;
+$accounts-text-color: $lt-primary-text-color;
+$accounts-divider-color: lightgrey;
+$accounts-toolbar-height: $header-height;
+
+ts-accounts-activity {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .ts-accounts-activity {
+
+    &__toolbar {
+      height: $accounts-toolbar-height;
+      flex-shrink: 0;
+    }
+
+    &__acc-list {
+    }
+  }
+}
