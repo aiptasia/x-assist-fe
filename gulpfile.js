@@ -19,7 +19,7 @@ gulp.task('serve', ['connect', 'watch']);
 // ------------------------------
 // Build
 
-gulp.task('build', ['html', 'jade', 'scss', 'js']);
+gulp.task('build', ['html', 'jade', 'scss', 'js', 'assets']);
 
 // ------------------------------
 // HTML
@@ -63,6 +63,14 @@ gulp.task('scss', function() {
 gulp.task('js', function() {
     return gulp.src('./src/**/*.js')
         .pipe(gulp.dest('./dist'));
+});
+
+// ------------------------------
+// Assets
+
+gulp.task('assets', function() {
+    return gulp.src('./src/assets/**/*')
+        .pipe(gulp.dest('./dist/assets'));
 });
 
 // ------------------------------
