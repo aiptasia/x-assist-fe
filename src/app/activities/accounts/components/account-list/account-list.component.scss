@@ -1,0 +1,13 @@
+ts-account-list {
+  display: block;
+  background-color: $accounts-bg-color;
+  overflow: auto;
+
+  .ts-account-list {
+
+    &__item {
+      padding: 1rem;
+      border-bottom: 1px solid $accounts-divider-color;
+    }
+  }
+}
