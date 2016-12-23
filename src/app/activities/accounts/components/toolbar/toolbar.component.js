@@ -6,15 +6,15 @@ angular
         templateUrl: 'app/activities/accounts/components/toolbar/toolbar.component.html',
         bindings: {
         },
-        controller: function() {
+        controller: ['$scope', function($scope) {
             var vm = this;
 
             vm.toolbar = [{
                 type: 'button',
-                svg: 'assets/images/icons.svg#icon-cross',
+                svg: 'assets/images/icons.svg#icon-close',
                 onClick: function() {
-                    console.log('cross');
+                    $scope.$emit('accounts.toolbar.hide');
                 }
             }];
-        }
+        }]
     });
