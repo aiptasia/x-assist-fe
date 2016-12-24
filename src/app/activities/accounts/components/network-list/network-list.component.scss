@@ -1,0 +1,23 @@
+ts-network-list {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+
+  background: $accounts-netlist-bg-color;
+  color: $accounts-netlist-text-color;
+
+  .ts-network-list {
+
+    &__item {
+      cursor: pointer;
+      padding: 0.5rem;
+
+      .ts-button__icon {
+        font-size: 2rem;
+      }
+    }
+    &__item:hover {
+      background-color: darken($accounts-netlist-bg-color, 5%);
+    }
+  }
+}
