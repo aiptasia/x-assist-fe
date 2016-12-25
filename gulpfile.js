@@ -6,6 +6,8 @@ var gulp = require('gulp'),
         pattern: ['gulp-*', 'del']
     });
 
+var proxy = require('http-proxy-middleware');
+
 // ------------------------------
 // Default
 
@@ -122,7 +124,13 @@ gulp.task('connect', function() {
         livereload: true,
         port: 8000,
         middleware: function(connect, opt) {
-            return [connect().use('/bower_components', connect.static('bower_components'))];
+            return [
+                connect().use('/bower_components', connect.static('bower_components')),
+                proxy('/api', {
+                    target: 'http://localhost:3000',
+                    changeOrigin: false,
+                    logLevel: 'debug'
+                })];
         }
     });
 });
