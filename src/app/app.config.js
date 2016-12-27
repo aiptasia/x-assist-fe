@@ -7,4 +7,7 @@ angular
 
         $compileProvider.commentDirectivesEnabled(false);
         $compileProvider.cssClassDirectivesEnabled(false);
-    }]);
+    }])
+    .constant('config', {
+        iconsFileName: 'assets/images/icons.svg'
+    });
