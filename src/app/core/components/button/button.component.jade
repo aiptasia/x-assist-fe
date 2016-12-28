@@ -1,4 +1,10 @@
-svg.ts-button__icon(ng-if="$ctrl.svg")
-  use(xlink:href="{{$ctrl.svg}}")
-.ts-button__divider(ng-if="$ctrl.title && $ctrl.svg")
-| {{$ctrl.title}}
+ts-icon.ts-button__icon(
+  svg="{{$ctrl.svg}}",
+  ng-if="$ctrl.svg"
+)
+
+.ts-button__divider(
+  ng-if="$ctrl.title && $ctrl.svg"
+)
+
+.ts-button__title {{$ctrl.title}}
