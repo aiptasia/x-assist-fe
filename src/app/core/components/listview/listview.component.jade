@@ -1,0 +1,6 @@
+.ts-listview__item(
+  ng-repeat="item in $ctrl.items",
+  ng-click="$ctrl.onClick(item)",
+  ng-class="{active: item.active}",
+  ng-transclude
+)

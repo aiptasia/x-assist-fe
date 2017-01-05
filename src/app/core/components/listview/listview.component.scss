@@ -1,0 +1,16 @@
+ts-listview {
+  display: block;
+}
+
+.ts-listview {
+
+  &__item {
+    padding: 1rem 1.25rem;
+  }
+
+  &__item:hover {
+  }
+
+  &__item.active {
+  }
+}
