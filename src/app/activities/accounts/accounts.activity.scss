@@ -1,11 +1,11 @@
 $accounts-toolbar-bg-color: grey;
-$accounts-toolbar-text-color: $dt-primary-text-color;
-$accounts-bg-color: $activity-background-color;
-$accounts-text-color: $lt-primary-text-color;
+$accounts-toolbar-text-color: $primary-text-color-invert;
+$accounts-bg-color: $background-activity;
+$accounts-text-color: $primary-text-color;
 $accounts-divider-color: lightgrey;
-$accounts-toolbar-height: $header-height;
+$accounts-toolbar-height: $toolbar-height;
 $accounts-netlist-bg-color: #909096;
-$accounts-netlist-text-color: $dt-primary-text-color;
+$accounts-netlist-text-color: $primary-text-color-invert;
 
 ts-accounts-activity {
   display: flex;

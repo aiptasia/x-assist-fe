@@ -1,21 +1,25 @@
-// Text color
+$primary-text-color: rgba(0,0,0,0.87);
+$secondary-text-color: rgba(0,0,0,0.54);
+$disabled-text-color: rgba(0,0,0,0.38);
+$dividers-text-color: rgba(0,0,0,0.12);
 
-$lt-primary-text-color: rgba(0,0,0,0.87);
-$lt-secondary-text-color: rgba(0,0,0,0.54);
-$lt-disabled-text-color: rgba(0,0,0,0.38);
-$lt-dividers-color: rgba(0,0,0,0.12);
+$primary-text-color-invert: rgb(255,255,255);
+$secondary-text-color-invert: rgba(255,255,255,0.7);
+$disabled-text-color-invert: rgba(255,255,255,0.5);
+$dividers-text-color-invert: rgba(255,255,255,0.12);
 
-$dt-primary-text-color: rgb(255,255,255);
-$dt-secondary-text-color: rgba(255,255,255,0.7);
-$dt-disabled-text-color: rgba(255,255,255,0.5);
-$dt-dividers-color: rgba(255,255,255,0.12);
+$primary-color: #9C27B0;
+$primary-lighten-color: #BA68C8;
+$primary-darken-color: #7B1FA2;
 
-// Header
+$accent-color: #FF9100;
 
-$header-background-color: linear-gradient(135deg, #536DFE, #7C4DFF);
-$header-height: 60px;
+$active-icon-color: rgba(0,0,0,0.54);
+$inactive-icon-color: rgba(0,0,0,0.38);
 
-// Activity
+$background-main-toolbar: linear-gradient(135deg, #536DFE, #7C4DFF);
+$background-toolbar: #e0e0e0;
+$background-activity: #fafafa;
+$background-dialog: #ffffff;
 
-$activity-background-color: #fafafa;
-
+$toolbar-height: 60px;
