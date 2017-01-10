@@ -1,40 +1,38 @@
 ts-main-activity {
   display: flex;
+}
 
-  .ts-main-activity {
+.ts-main-activity {
 
-    &__container {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+    order: 1;
+  }
 
-      flex-grow: 1;
-      order: 1;
+  &__view {
+    background: $background-activity;
+    display: flex;
+    overflow: auto;
+    padding: 1rem;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__sidebar {
+
+    &.left {
+      flex-basis: 25%;
+      order: 0;
+      border-right: 1px solid $dividers-text-color;
     }
-
-    &__toolbar {
-      height: $toolbar-height;
-      flex-shrink: 0;
-    }
-
-    &__view {
-      display: block;
-      overflow: auto;
-    }
-
-    &__sidebar {
-
-      &.left {
-        flex-basis: 20%;
-        order: 0;
-        border-right: 1px solid $dividers-text-color;
-      }
-      &.right {
-        flex-basis: 20%;
-        min-width: 300px;
-        order: 2;
-        border-left: 1px solid $dividers-text-color;
-      }
+    &.right {
+      flex-basis: 25%;
+      min-width: 300px;
+      order: 2;
+      border-left: 1px solid $dividers-text-color;
     }
   }
 }
