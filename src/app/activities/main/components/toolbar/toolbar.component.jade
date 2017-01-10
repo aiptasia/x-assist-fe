@@ -1,4 +1,13 @@
-ts-toolbar(
-  data="$ctrl.toolbar",
-  on-click="item.onClick()"
-)
+ts-toolbar
+  .ts-toolbar__group
+    .ts-toolbar__item
+      .ts-toolbar__title
+        ts-button.default(
+          title="TrickySMM",
+          ng-click="$ctrl.onMainActivityOpen()")
+
+  .ts-toolbar__group
+    .ts-toolbar__item
+      ts-button.round(
+        svg="icon-accounts",
+        ng-click="")

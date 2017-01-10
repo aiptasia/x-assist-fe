@@ -52,6 +52,7 @@ gulp.task('scss', function() {
             'app/core/style/variables.scss',
             'app/core/style/mixins.scss',
             'app/core/style/*.scss',
+            'app/core/components/**/*.scss',
             '**/*.activity.scss',
             '**/*.scss']))
         .pipe($.concat('app.scss'))
@@ -64,7 +65,15 @@ gulp.task('scss', function() {
 // JavaScript
 
 gulp.task('js', function() {
+    // var config =
+    //     gulp.src('config.json')
+    //         .pipe($.ngConfig('ts', {
+    //             createModule: false
+    //         }));
+
     return gulp.src('./src/**/*.js')
+        // .pipe(addStream.obj(config))
+        // .pipe($.concat('app.js'))
         .pipe(gulp.dest('./dist'));
 });
 

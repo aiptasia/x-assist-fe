@@ -3,17 +3,10 @@
 angular
     .module('ts.components.toolbar')
     .component('tsToolbar', {
-        templateUrl: 'app/core/components/toolbar/toolbar.component.html',
-        bindings: {
-            "data": "<",
-            "onClick": "&"
-        },
-        transclude: true,
-        controller: function($transclude) {
-            var vm = this;
-
-            vm.onItemClick = function(item) {
-                vm.onClick({item: item});
+        transclude: 'true',
+        controller: ['$element', '$transclude',
+            function($element, $transclude) {
+                $element.append($transclude());
             }
-        }
+        ]
     })

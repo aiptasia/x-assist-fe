@@ -1,4 +1,14 @@
-ts-toolbar(
-  data="$ctrl.toolbar",
-  on-click="item.onClick()"
-)
+ts-toolbar
+  .ts-toolbar__group
+    .ts-toolbar__item
+      ts-button.round(
+        svg="icon-arrow-left",
+        ng-click="$ctrl.onAccountsManagerClose()")
+    .ts-toolbar__item
+      .ts-toolbar__title Accounts Manager
+
+  .ts-toolbar__group
+    .ts-toolbar__item
+      ts-button.round(
+        svg="icon-menu-vert",
+        ng-click="")

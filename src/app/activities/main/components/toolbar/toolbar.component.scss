@@ -1,5 +1,13 @@
 ts-main-toolbar {
+  background: $background-main-toolbar;
   display: flex;
-  background: $main-toolbar-bg-color;
-  color: $main-toolbar-text-color;
+  flex-shrink: 0;
+  height: $toolbar-height;
+
+  .ts-toolbar__item {
+    color: $secondary-text-color-invert;
+  }
+  .ts-toolbar__title {
+    color: $primary-text-color-invert;
+  }
 }

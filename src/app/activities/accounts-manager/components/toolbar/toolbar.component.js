@@ -2,19 +2,14 @@
 
 angular
     .module('ts.accounts-manager.activity')
-    .component('tsAccountsToolbar', {
+    .component('tsAccountsManagerToolbar', {
         templateUrl: 'app/activities/accounts-manager/components/toolbar/toolbar.component.html',
-        bindings: {
-        },
+        bindings: {},
         controller: ['$scope', function($scope) {
             var vm = this;
 
-            vm.toolbar = [{
-                type: 'button',
-                svg: 'assets/images/icons.svg#icon-close',
-                onClick: function() {
-                    $scope.$emit('accounts.toolbar.hide');
-                }
-            }];
+            vm.onAccountsManagerClose = function() {
+                $scope.$emit('on.accounts-manager.close');
+            }
         }]
     });

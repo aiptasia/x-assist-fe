@@ -36,6 +36,7 @@ ts-main-activity {
       }
       &.right {
         flex-basis: 20%;
+        min-width: 300px;
         order: 2;
         border-left: 1px solid $main-sidebar-border-color;
       }

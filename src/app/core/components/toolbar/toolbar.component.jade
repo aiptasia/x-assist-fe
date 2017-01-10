@@ -1,9 +1,0 @@
-.ts-toolbar__item(ng-repeat="item in $ctrl.data")
-  ts-button(
-    ng-if="item.type === 'button'",
-    data="item",
-    ng-click="$ctrl.onItemClick(item)")
-  ts-dropdown(
-    ng-if="item.type === 'dropdown'",
-    data="item",
-    on-click="$ctrl.onItemClick(item)")

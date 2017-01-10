@@ -1,18 +1,33 @@
-$toolbar-item-padding: 1rem;
+$toolbar-padding: 0.5rem;
+$toolbar-item-padding: 0.1rem;
+$toolbar-title-padding: 0.5rem;
 
-// .toolbar element must be placed inside a flexbox
+// Toolbar element must be placed inside a flexbox
 // container for purpose of vertical alignment
 
 ts-toolbar {
   display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  padding: 0 $toolbar-padding;
+}
 
-  .ts-toolbar {
+.ts-toolbar {
 
-    &__item {
-      align-items: center;
-      display: flex;
-      padding: 0 $toolbar-item-padding;
-      white-space: nowrap;
-    }
+  &__group {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0 $toolbar-item-padding;
+    white-space: nowrap;
+    color: $secondary-text-color;
+  }
+
+  &__title {
+    padding: 0 $toolbar-title-padding;
+    color: $primary-text-color;
   }
 }

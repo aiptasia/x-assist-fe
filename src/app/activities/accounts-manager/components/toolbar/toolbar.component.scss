@@ -1,5 +1,6 @@
-ts-accounts-toolbar {
+ts-accounts-manager-toolbar {
+  background: $background-toolbar;
   display: flex;
-  background-color: $accounts-toolbar-bg-color;
-  color: $accounts-toolbar-text-color;
+  flex-shrink: 0;
+  height: $toolbar-height;
 }
