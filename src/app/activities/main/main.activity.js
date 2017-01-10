@@ -7,13 +7,23 @@ angular
         controller: ['$scope', function($scope) {
             var vm = this;
 
-            vm.showAccountsActivity = true;
+            vm.showProjectAccounts = false;
+            vm.showAccountsManager = false;
 
-            $scope.$on('accounts.toolbar.show', function() {
-                vm.showAccountsActivity = true;
+            $scope.$on('on.project-accounts.open', function() {
+                vm.showAccountsManager = false;
+                vm.showProjectAccounts = true;
             });
-            $scope.$on('accounts.toolbar.hide', function() {
-                vm.showAccountsActivity = false;
+            $scope.$on('on.project-accounts.close', function() {
+                vm.showProjectAccounts = false;
+            });
+            $scope.$on('on.accounts-manager.open', function() {
+                vm.showProjectAccounts = false;
+                vm.showAccountsManager = true;
+            });
+            $scope.$on('on.accounts-manager.close', function() {
+                vm.showAccountsManager = false;
+                vm.showProjectAccounts = true;
             });
         }]
     });

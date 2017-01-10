@@ -1,0 +1,20 @@
+ts-project-accounts {
+  background: $background-activity;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ts-project-accounts {
+
+  &__account-list {
+    overflow: auto;
+  }
+
+  &__empty-state {
+    align-items: center;
+    display: flex;
+    height: 75%;
+    justify-content: center;
+  }
+}
