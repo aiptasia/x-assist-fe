@@ -8,6 +8,10 @@ ts-toolbar
 
   .ts-toolbar__group
     .ts-toolbar__item
+      ts-button.default(
+        title="New Post",
+        ng-click="$ctrl.onNewPostActivityOpen()")
+    .ts-toolbar__item
       ts-button.round(
         svg="icon-accounts",
         ng-click="$ctrl.onProjectAccountsActivityOpen()")

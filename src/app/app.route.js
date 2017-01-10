@@ -10,6 +10,9 @@ angular
                 .when('/', {
                     template: 'main view'
                 })
+                .when('/new-post', {
+                    template: '<ts-new-post></ts-new-post>'
+                })
                 .otherwise('/');
         }
     ])

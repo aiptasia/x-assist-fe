@@ -1,0 +1,26 @@
+ts-new-post {
+  background: $background-dialog;
+  border: 1px solid $dividers-text-color;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: 992px;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+}
+
+.ts-new-post {
+
+  &__header {
+  }
+
+  &__content {
+    border-bottom: 1px solid $dividers-text-color;
+    border-top: 1px solid $dividers-text-color;
+    padding: 1rem;
+  }
+
+  &__footer {
+    padding: 1rem;
+  }
+}
