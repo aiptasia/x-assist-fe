@@ -7,12 +7,12 @@ $accounts-toolbar-height: $toolbar-height;
 $accounts-netlist-bg-color: #909096;
 $accounts-netlist-text-color: $primary-text-color-invert;
 
-ts-accounts-activity {
+ts-accounts-manager {
   display: flex;
   flex-direction: column;
   height: 100%;
 
-  .ts-accounts-activity {
+  .ts-accounts-manager {
 
     &__toolbar {
       height: $accounts-toolbar-height;

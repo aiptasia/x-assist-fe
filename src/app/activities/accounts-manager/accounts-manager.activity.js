@@ -1,9 +1,9 @@
 'use strict';
 
 angular
-    .module('ts.accounts.activity')
-    .component('tsAccountsActivity', {
-        templateUrl: 'app/activities/accounts/accounts.activity.html',
+    .module('ts.accounts-manager.activity')
+    .component('tsAccountsManager', {
+        templateUrl: 'app/activities/accounts-manager/accounts-manager.activity.html',
         bindings: {},
         controller: function() {
             var vm = this;
