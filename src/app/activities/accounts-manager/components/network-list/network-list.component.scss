@@ -1,10 +1,12 @@
+$background: $background-toolbar;
+
 ts-network-list {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
 
-  background: $accounts-netlist-bg-color;
-  color: $accounts-netlist-text-color;
+  background: $background;
+  color: $primary-text-color;
 
   .ts-network-list {
 
@@ -17,7 +19,7 @@ ts-network-list {
       }
     }
     &__item:hover {
-      background-color: darken($accounts-netlist-bg-color, 5%);
+      background: darken($background, 5%);
     }
   }
 }

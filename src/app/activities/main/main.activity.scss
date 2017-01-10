@@ -1,8 +1,3 @@
-$main-toolbar-bg-color: $background-main-toolbar;
-$main-toolbar-text-color: $primary-text-color-invert;
-$main-toolbar-height: $toolbar-height;
-$main-sidebar-border-color: grey;
-
 ts-main-activity {
   display: flex;
 
@@ -18,7 +13,7 @@ ts-main-activity {
     }
 
     &__toolbar {
-      height: $main-toolbar-height;
+      height: $toolbar-height;
       flex-shrink: 0;
     }
 
@@ -32,13 +27,13 @@ ts-main-activity {
       &.left {
         flex-basis: 20%;
         order: 0;
-        border-right: 1px solid $main-sidebar-border-color;
+        border-right: 1px solid $dividers-text-color;
       }
       &.right {
         flex-basis: 20%;
         min-width: 300px;
         order: 2;
-        border-left: 1px solid $main-sidebar-border-color;
+        border-left: 1px solid $dividers-text-color;
       }
     }
   }
