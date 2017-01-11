@@ -1,14 +1,16 @@
 ts-accounts-manager {
+  background: $background-activity;
   display: flex;
   flex-direction: column;
   height: 100%;
+}
 
-  .ts-accounts-manager {
+.ts-accounts-manager {
 
-    &__acc-list {
-    }
+  &__network-list {
+  }
 
-    &__net-list {
-    }
+  &__account-list {
+    overflow: auto;
   }
 }
