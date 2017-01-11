@@ -1,25 +1,26 @@
 $background: $background-toolbar;
 
 ts-network-list {
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-
   background: $background;
-  color: $primary-text-color;
+  border-top: 1px solid $dividers-text-color;
+  color: $primary-text-color-invert;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+}
 
-  .ts-network-list {
+.ts-network-list {
 
-    &__item {
-      cursor: pointer;
-      padding: 0.5rem;
+  &__item {
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  &__item:hover {
+    background: darken($background, 3%);
+  }
 
-      .ts-button__icon {
-        font-size: 2rem;
-      }
-    }
-    &__item:hover {
-      background: darken($background, 5%);
-    }
+  &__button {
+    color: currentColor;
+    font-size: 2rem;
   }
 }

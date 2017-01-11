@@ -18,5 +18,16 @@ angular
                 "name": "test",
                 "img_xs": "https://vk.com/images/community_50.png"
             }];
+
+            vm.networks = [{
+                svg: "icon-vk",
+                href: ""
+            }, {
+                svg: "icon-facebook",
+                href: ""
+            }, {
+                svg: "icon-twitter",
+                href: ""
+            }];
         }
     });

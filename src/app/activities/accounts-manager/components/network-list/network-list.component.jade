@@ -1,6 +1,9 @@
 .ts-network-list__item(
   ng-repeat="network in $ctrl.networks"
 )
-  ts-button(
-    svg="{{network.svg}}"
+  a.ts-network-list__button(
+    href="{{network.href}}"
   )
+    ts-button(
+      svg="{{network.svg}}"
+    )
