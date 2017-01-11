@@ -1,0 +1,28 @@
+ts-empty-state {
+  align-items: center;
+  color: $secondary-text-color;
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-empty-state {
+
+  &__icon {
+    font-size: 3rem;
+  }
+
+  &__title {
+    margin-top: 1rem;
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+  }
+
+  &__link {
+    color: $primary-color;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+}

@@ -9,3 +9,15 @@ ts-project-accounts-toolbar
       title="{{$parent.item.name}}",
       subtitle="{{$parent.item.object_type}}"
     )
+
+.ts-project-accounts__empty-state(
+  ng-if="!$ctrl.accounts"
+)
+  ts-empty-state(
+    title="You have no attached accounts yet",
+    subtitle="Please add new account"
+  )
+    ts-button(
+      title="Add your first account",
+      ng-click="$ctrl.onAccountsManagerOpen()"
+    )

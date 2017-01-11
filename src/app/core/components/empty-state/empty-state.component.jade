@@ -1,0 +1,14 @@
+.ts-empty-state__icon(ng-if="$ctrl.icon")
+  ts-icon(svg="{{$ctrl.icon}}")
+
+.ts-empty-state__title(ng-if="$ctrl.title")
+  |{{$ctrl.title}}
+
+.ts-empty-state__subtitle(ng-if="$ctrl.subtitle")
+  |{{$ctrl.subtitle}}
+
+.ts-empty-state__link(
+  ng-transclude
+)
+
+

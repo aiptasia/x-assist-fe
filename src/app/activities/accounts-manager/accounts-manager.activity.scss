@@ -13,4 +13,11 @@ ts-accounts-manager {
   &__account-list {
     overflow: auto;
   }
+
+  &__empty-state {
+    align-items: center;
+    display: flex;
+    height: 75%;
+    justify-content: center;
+  }
 }

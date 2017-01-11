@@ -6,3 +6,11 @@ ts-network-list(networks="$ctrl.networks")
   ts-account-list(
     accounts="$ctrl.accounts"
   )
+
+.ts-accounts-manager__empty-state(
+  ng-if="!$ctrl.accounts"
+)
+  ts-empty-state(
+    title="You have no attached accounts yet",
+    subtitle="Please select the preferred social network"
+  )
