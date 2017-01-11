@@ -1,3 +1,5 @@
+$background: $background-dialog;
+
 ts-listview {
   display: block;
 }
@@ -5,10 +7,13 @@ ts-listview {
 .ts-listview {
 
   &__item {
+    background: $background;
+    border-bottom: 1px solid $dividers-text-color;
     padding: 1rem 1.25rem;
   }
 
   &__item:hover {
+    background: darken($background, 3%);
   }
 
   &__item.active {
