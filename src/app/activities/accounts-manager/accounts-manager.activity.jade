@@ -3,9 +3,12 @@ ts-accounts-manager-toolbar
 ts-network-list(networks="$ctrl.networks")
 
 .ts-accounts-manager__account-list
-  ts-account-list(
-    accounts="$ctrl.accounts"
+  ts-listview(
+    items="$ctrl.accounts"
   )
+    ts-button(
+      title="{{$parent.item.name}}"
+    )
 
 .ts-accounts-manager__empty-state(
   ng-if="!$ctrl.accounts"

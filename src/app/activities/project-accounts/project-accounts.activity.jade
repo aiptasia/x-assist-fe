@@ -4,10 +4,8 @@ ts-project-accounts-toolbar
   ts-listview(
     items="$ctrl.accounts"
   )
-    ts-listitem(
-      icon="{{$parent.item.img_xs}}",
-      title="{{$parent.item.name}}",
-      subtitle="{{$parent.item.object_type}}"
+    ts-button(
+      title="{{$parent.item.name}}"
     )
 
 .ts-project-accounts__empty-state(
