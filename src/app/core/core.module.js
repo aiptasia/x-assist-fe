@@ -6,5 +6,6 @@ angular.module('ts.core', [
     'ts.components.empty-state',
     'ts.components.icon',
     'ts.components.listview',
+    'ts.components.multiline',
     'ts.components.toolbar'
 ]);

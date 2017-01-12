@@ -5,7 +5,10 @@ ts-toolbar
         svg="icon-close",
         ng-click="$ctrl.onProjectAccountsClose()")
     .ts-toolbar__item
-      .ts-toolbar__title Project Accounts
+      ts-multiline.ts-toolbar__title(
+        title="Project Accounts",
+        subtitle="default project"
+      )
 
   .ts-toolbar__group
     .ts-toolbar__item
